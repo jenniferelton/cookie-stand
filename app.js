@@ -1,3 +1,63 @@
+function Shop(location, minCust, maxCust, avgCookieSale) {
+
+    this.location = location;
+    this.minCust = minCust;
+    this.maxCust = maxCust;
+    this.cookiesSoldHour = [];
+    this.avgCookieSale = avgCookieSale;
+    this.total = 0;
+    this.getRandomNumber();
+    this.transfer();
+}
+Shop.prototype.getRandomNumber = function () {
+    for (var i = 0; i < 15; i++) {
+        var number = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+        var totalCookies = Math.floor(this.avgCookieSale * number);
+        this.cookiesSoldHour.push(totalCookies);
+    }
+};
+Shop.prototype.totalNumber = function () {
+    for (var i = 0; i < 15; i++) {
+        this.total += this.cookiesSoldHour[i];
+    }
+    
+};
+Shop.prototype.transfer = function () {
+    var mainVariable = document.getElementById('tbody');
+    console.log(mainVariable);
+    var tr1 = document.createElement('tr');
+    tr1.innerHTML = this.location;
+    mainVariable.appendChild(tr1);
+
+    
+    
+    
+    for (var i = 0; i < 15; i++) {
+
+var td1 = document.createElement('td');
+
+        td1.innerText = this.cookiesSoldHour[i] + "cookies";
+        tr1.appendChild(td1);
+         }
+
+    mainVariable.appendChild(tr1);
+
+};
+
+var pdxAirport = new Shop ( 'PDX Airport', 23, 65, 6.3);
+var pioneerSquare = new Shop ('Pioneer Square', 3, 24, 1.2);
+var powells = new Shop ('Powell\'s', 11, 38, 3.7);
+var stJohns = new Shop ('St John\'s', 20, 38, 2.3);
+var waterfront = new Shop ('Waterfront', 2, 16, 4.6);
+
+
+
+
+
+
+
+
+
 var pdxAirport = {
     name: 'Pdx Airport',
     minimumHourlyCustomers: 23,
