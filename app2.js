@@ -7,8 +7,8 @@ var sumOfCookie = 0;
 
 
 
-function Shop(location, minCust, maxCust, avgCookieSale, listID) {
-    this.listID = listID
+function Shop(location, minCust, maxCust, avgCookieSale) {
+
     this.location = location;
     this.minCust = minCust;
     this.maxCust = maxCust;
@@ -78,12 +78,11 @@ function totalTotal() {
     }
 }
 
-var pdxAirport = new Shop('PDX Airport', 23, 65, 6.3, 'pdxcookie');
-var pioneerSquare = new Shop('Pioneer Square', 3, 24, 1.2, 'pioneercookie');
-var powells = new Shop('Powell\'s', 11, 38, 3.7, 'powellcookie');
-var stJohns = new Shop('St John\'s', 20, 38, 2.3, 'stjohncookie');
-var waterfront = new Shop('Waterfront', 2, 16, 4.6, 'watercookie');
+var pdxAirport = new Shop('PDX Airport', 23, 65, 6.3);
+var pioneerSquare = new Shop('Pioneer Square', 3, 24, 1.2);
+var powells = new Shop('Powell\'s', 11, 38, 3.7);
+var stJohns = new Shop('St John\'s', 20, 38, 2.3);
+var waterfront = new Shop('Waterfront', 2, 16, 4.6);
 
 
 totalTotal();
-
