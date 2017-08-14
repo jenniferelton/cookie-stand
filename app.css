@@ -1,0 +1,51 @@
+
+header {
+    background-color:brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: double;
+    border-width: 6px;
+    margin-top: 18px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+}
+h1 {
+    text-align: center;
+}
+ul {
+    margin-top: -60px;
+}
+
+body {
+    background-color: burlywood;
+    padding: 20px;
+}
+table,
+td,
+tr {
+    border: solid 3px black;
+    padding: 10px;
+    background-color: papayawhip;
+    position: relative;
+}
+form {
+    padding-bottom: 25%;
+    float: right;
+    width: 25.5%;
+    margin-top: 10px;
+    border: 2px color black;
+}
+div {
+    margin: 0 auto;
+    width: 99.5%;
+}
+button {
+    background: gray;
+    margin: 11px;
+}
+footer {
+    background-color: brown;
+    padding: 25px;
+    margin-top: 20px
+    
+}
